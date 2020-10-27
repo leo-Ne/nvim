@@ -30,16 +30,13 @@ set tabstop=4
 set shiftwidth=2
 set softtabstop=2
 set list
-set listchars=tab:>>,trail:-
-set scrolloff=5
+set listchars=tab:\|\ ,trail:▫
+set scrolloff=4
 set tw=0
 set indentexpr=
 set backspace=indent,eol,start
 set foldmethod=indent
 set foldlevel=99
-"" let &t_SI = \<Esc>]50;CursorShape=1\x7"
-"" let &t_SR = \<Esc>]50;CursorShape=2\x7"
-"" let &t_EI = \<Esc>]50;CursorShape=0\x7"
 set laststatus=2
 set autochdir
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
@@ -56,7 +53,6 @@ map S :w<CR>
 map R :source ~/.config/nvim/init.vim<CR>
 
 map ; :
-"" work dir
 exec 'cd ' . fnameescape('~/WorkSpace/')
 set autochdir
 
@@ -138,7 +134,7 @@ call plug#end()
 "" ===
 colorscheme gruvbox
 set background=dark
-set guioptions=       " 去掉两边的scrollbar
+set guioptions=      " 去掉两边的scrollbar
 set guifont=Monaco:h12
 
 "" ===
