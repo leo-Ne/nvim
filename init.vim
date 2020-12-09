@@ -92,6 +92,7 @@ map tu  :tabe<CR>
 map tl  :+tabnext<CR>
 map tj  :-tabnext<CR>
 
+" TitleDet() fuction
 
 "complie function
 noremap r :call CompileCurrentFile()<CR>
@@ -490,7 +491,7 @@ let g:startify_custom_header = [
 let g:startify_change_to_dir = 1
 let g:startify_files_number = 20
 let g:startify_session_autoload = 1
-map <LEADER>1  :Startify<CR>
+map <LEADER>`  :Startify<CR>
 "" ===
 "" ===  vim-easy-align
 "" ===
