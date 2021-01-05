@@ -181,15 +181,19 @@ let g:coc_global_extensions = [
 "==
 "=== coc-explorer
 "==
-nmap <LEADER>e :CocCommand explorer<CR>
+nmap tt :CocCommand explorer<CR>
 let g:coc_explorer_global_presets = {
 \   '.vim': {
 \     'root-uri': '~/.vim',
 \   },
 \   'tab': {
 \     'position': 'tab',
-\     'quit-on-open': v:,
+\     'quit-on-open': v:true,
 \   },
+\    'left':{
+\     'position': 'left',
+\      'width': 10,
+\    },
 \   'floating': {
 \     'position': 'floating',
 \     'open-action-strategy': 'sourceWindow',
@@ -213,6 +217,9 @@ let g:coc_explorer_global_presets = {
 \   },
 \   'simplify': {
 \     'file-child-template': '[selection | clip | 1] [indent][icon | 1] [filename omitCenter 1]'
+\   },
+\   'buffer': {
+\     'source': [{'name': 'buffer', 'expand': v:true}]
 \   }
 \ }
 
@@ -251,7 +258,6 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
-nmap tt :CocCommand explorer<CR>
 " coc-translator
 nmap ts <Plug>(coc-translator-p)
 " Remap for do codeAction of selected region
@@ -297,17 +303,9 @@ set nowritebackup
 set cmdheight=2
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
-set updatetime=300
+set updatetime=100
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-"" if has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-""   set signcolumn=number
-"" else
-""   set signcolumn=yes
-"" endif
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
