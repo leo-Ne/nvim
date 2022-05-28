@@ -60,13 +60,13 @@ set autochdir
 let g:syntastic_cpp_check_header = 1
 
 "" key noremap
-noremap h i
-noremap i k
-noremap k j
-noremap j h
-noremap I 5k
-noremap K 5j
-noremap J 7h
+"noremap h i
+"noremap i k
+"noremap k j
+"noremap j h
+noremap K 5k
+noremap H 5h
+noremap J 7j
 noremap L 7l
 
 "" split setting
